@@ -2,7 +2,9 @@ const BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 console.log('🔍 API BASE URL:', BASE, '| Full env:', import.meta.env.VITE_API_URL);
 
 async function post(path, payload) {
-  const res = await fetch(`${BASE}${path}`, {
+  const fullUrl = `${BASE}${path}`;
+  console.log('🔍 Fetching:', fullUrl, '| BASE:', BASE, '| path:', path);
+  const res = await fetch(fullUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload),

@@ -245,7 +245,10 @@ export default function ChatPanel({ result, patientValues }) {
       const controller = new AbortController();
       abortRef.current = controller;
 
-      const res = await fetch(`${BASE}/chat`, {
+      const chatUrl = `${BASE}/chat`;
+      console.log('🔍 ChatPanel fetching:', chatUrl, '| BASE:', BASE);
+
+      const res = await fetch(chatUrl, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         signal: controller.signal,
