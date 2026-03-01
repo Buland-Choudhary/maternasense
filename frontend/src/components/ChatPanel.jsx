@@ -4,6 +4,7 @@ const DISP = "'Fraunces', Georgia, serif";
 const BODY = "'Plus Jakarta Sans', system-ui, sans-serif";
 
 const BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+console.log('🔍 ChatPanel BASE URL:', BASE);
 
 // ── Suggested questions per risk level ───────────────────────────
 const SUGGESTIONS = {
