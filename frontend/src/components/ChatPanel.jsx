@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 const DISP = "'Fraunces', Georgia, serif";
 const BODY = "'Plus Jakarta Sans', system-ui, sans-serif";
 
-const BASE = "http://127.0.0.1:8000";
+const BASE = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
 
 // ── Suggested questions per risk level ───────────────────────────
 const SUGGESTIONS = {
